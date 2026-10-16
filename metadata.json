@@ -1,0 +1,6 @@
+{
+  "name": "برامج التوجيه الطلابي",
+  "description": "المنصة الشاملة لخطة برامج وخدمات التوجيه الطلابي - مدرسة الجشة المتوسطة - الإدارة العامة للتوجيه الطلابي 1447هـ",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
