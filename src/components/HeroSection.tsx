@@ -4,8 +4,6 @@ import {
   Compass, 
   Search, 
   Sparkles, 
-  ShieldCheck, 
-  GraduationCap, 
   MessageCircle, 
   Users, 
   BookOpen,
@@ -47,26 +45,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Ministry & School Header Ribbon */}
-        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-6 animate-in fade-in slide-in-from-bottom-3 duration-500">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-amber-500/30 text-amber-300 text-xs sm:text-sm font-semibold shadow-lg shadow-amber-950/20">
-            <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
-            <span>المملكة العربية السعودية • وزارة التعليم</span>
-          </div>
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-slate-700/80 text-slate-300 text-xs sm:text-sm font-medium">
-            <GraduationCap className="w-4 h-4 text-amber-400" />
-            <span>{SCHOOL_INFO.name}</span>
-            <span className="text-amber-400 font-bold">({SCHOOL_INFO.year})</span>
-          </div>
-          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-950/40 border border-emerald-500/30 text-emerald-400 text-xs font-semibold">
-            <ShieldCheck className="w-3.5 h-3.5" />
-            <span>الإدارة العامة للتوجيه الطلابي</span>
-          </div>
-        </div>
-
         {/* Main Headline */}
-        <div className="text-center max-w-4xl mx-auto mb-10">
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-white leading-tight tracking-tight mb-5">
+        <div className="text-center max-w-5xl mx-auto mb-10">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight mb-5 whitespace-nowrap">
             خطة برامج وخدمات{' '}
             <span className="bg-gradient-to-l from-amber-200 via-amber-400 to-amber-600 bg-clip-text text-transparent">
               التوجيه الطلابي

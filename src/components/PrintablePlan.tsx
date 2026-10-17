@@ -19,7 +19,7 @@ export const PrintablePlan: React.FC<PrintablePlanProps> = ({ onClose }) => {
         <div className="sticky top-4 z-30 mb-8 flex items-center justify-between bg-slate-900 text-white p-4 rounded-xl shadow-lg print:hidden">
           <div className="flex items-center gap-2">
             <Compass className="w-5 h-5 text-amber-400" />
-            <span className="font-bold text-sm">معاينة طباعة الخطة الشاملة للتوجيه الطلابي 1447هـ</span>
+            <span className="font-bold text-sm">معاينة طباعة الخطة الشاملة للتوجيه الطلابي {SCHOOL_INFO.year}</span>
           </div>
           <div className="flex items-center gap-3">
             <button
