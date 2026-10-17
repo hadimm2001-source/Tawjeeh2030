@@ -32,18 +32,18 @@ export const GuidanceApproachesSection: React.FC<GuidanceApproachesSectionProps>
   };
 
   return (
-    <section id="approaches" className="py-20 bg-[#0A1120] border-b border-amber-500/15">
+    <section id="approaches" className="py-20 bg-slate-50 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-3">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold mb-3">
             <span>المنهجية العلمية المعتمدة</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            مناهج <span className="text-amber-400">التوجيه الطلابي</span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            مناهج <span className="text-amber-700">التوجيه الطلابي</span>
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base mt-2">
+          <p className="text-slate-600 text-sm sm:text-base mt-2 font-medium">
             ثلاثة مناهج متكاملة تتدرج من البناء الإنمائي الشامل إلى التحصين الوقائي ثم التدخل العلاجي المتخصص
           </p>
         </div>
@@ -58,27 +58,28 @@ export const GuidanceApproachesSection: React.FC<GuidanceApproachesSectionProps>
               <div
                 key={appr.id}
                 onClick={() => onSelectApproach(approachTag)}
-                className={`cursor-pointer rounded-2xl p-7 border transition-all duration-300 flex flex-col justify-between group ${
+                className={`cursor-pointer rounded-2xl p-7 border transition-all duration-300 flex flex-col justify-between group bg-white ${
                   isSelected
-                    ? 'bg-slate-900 border-amber-400 ring-2 ring-amber-400/20 shadow-2xl scale-[1.02]'
-                    : 'bg-[#0E1A2E]/80 border-slate-800 hover:border-slate-700 hover:bg-slate-900 hover:-translate-y-1 shadow-xl'
+                    ? 'border-amber-500 ring-2 ring-amber-400/30 shadow-md scale-[1.01]'
+                    : 'border-slate-200 hover:border-slate-300 hover:-translate-y-1 shadow-xs hover:shadow-md'
                 }`}
               >
                 <div>
                   <div className="flex items-center justify-between mb-5">
                     <div 
-                      className="w-16 h-16 rounded-2xl flex items-center justify-center border shadow-inner group-hover:scale-105 transition-transform"
+                      className="w-16 h-16 rounded-2xl flex items-center justify-center border shadow-xs group-hover:scale-105 transition-transform"
                       style={{ 
-                        backgroundColor: `${appr.color}15`, 
-                        borderColor: `${appr.color}35` 
+                        backgroundColor: `${appr.color}10`, 
+                        borderColor: `${appr.color}30` 
                       }}
                     >
                       {getIcon(appr.icon, appr.color)}
                     </div>
                     <span 
-                      className="text-xs font-bold px-3 py-1 rounded-full"
+                      className="text-xs font-bold px-3 py-1 rounded-full border"
                       style={{ 
-                        backgroundColor: `${appr.color}20`, 
+                        backgroundColor: `${appr.color}15`, 
+                        borderColor: `${appr.color}30`,
                         color: appr.color 
                       }}
                     >
@@ -86,26 +87,26 @@ export const GuidanceApproachesSection: React.FC<GuidanceApproachesSectionProps>
                     </span>
                   </div>
 
-                  <h3 className="text-2xl font-black text-white mb-3 group-hover:text-amber-300 transition-colors">
+                  <h3 className="text-2xl font-black text-slate-900 mb-3 group-hover:text-amber-700 transition-colors">
                     {appr.title}
                   </h3>
 
-                  <p className="text-slate-300 text-sm leading-relaxed mb-5">
+                  <p className="text-slate-600 text-sm leading-relaxed mb-5 font-normal">
                     {appr.description}
                   </p>
 
-                  <div className="p-3.5 rounded-xl bg-slate-950/60 border border-slate-800/80 mb-5">
-                    <p className="text-xs font-bold text-slate-200 mb-1">الفئة المستهدفة بالمنهج:</p>
-                    <p className="text-xs text-slate-400 leading-relaxed">{appr.targetFocus}</p>
+                  <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 mb-5">
+                    <p className="text-xs font-bold text-slate-900 mb-1">الفئة المستهدفة بالمنهج:</p>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">{appr.targetFocus}</p>
                   </div>
 
                   <div className="space-y-2">
-                    <p className="text-xs font-bold text-slate-300">أبرز التطبيقات العملية:</p>
+                    <p className="text-xs font-bold text-slate-900">أبرز التطبيقات العملية:</p>
                     {appr.methods.map((m, i) => (
-                      <div key={i} className="flex items-center gap-2 text-xs text-slate-300">
+                      <div key={i} className="flex items-center gap-2 text-xs text-slate-700 font-medium">
                         <div 
                           className="w-4 h-4 rounded-full flex items-center justify-center shrink-0"
-                          style={{ backgroundColor: `${appr.color}25` }}
+                          style={{ backgroundColor: `${appr.color}20` }}
                         >
                           <Check className="w-2.5 h-2.5" style={{ color: appr.color }} />
                         </div>
@@ -116,7 +117,7 @@ export const GuidanceApproachesSection: React.FC<GuidanceApproachesSectionProps>
                 </div>
 
                 <div 
-                  className="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs font-bold"
+                  className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold"
                   style={{ color: appr.color }}
                 >
                   <span>{isSelected ? 'المنهج نشط في التصفية' : 'تصفية برامج هذا المنهج'}</span>

@@ -81,7 +81,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0A1120] text-slate-100 font-['Tajawal',sans-serif] relative selection:bg-amber-500 selection:text-slate-950">
+    <div className="min-h-screen bg-[#F8FAFC] text-slate-800 font-['Tajawal',sans-serif] relative selection:bg-amber-500 selection:text-white">
       
       {/* Sticky Luxury Navbar */}
       <Navbar 

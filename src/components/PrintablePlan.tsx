@@ -12,7 +12,7 @@ export const PrintablePlan: React.FC<PrintablePlanProps> = ({ onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-black/90 p-4 sm:p-8 text-right font-['Tajawal',sans-serif]">
+    <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-900/70 backdrop-blur-sm p-4 sm:p-8 text-right font-['Tajawal',sans-serif]">
       <div className="max-w-5xl mx-auto bg-white text-slate-900 rounded-2xl shadow-2xl p-6 sm:p-10 my-6 relative print:p-0 print:m-0 print:shadow-none print:w-full">
         
         {/* Floating Controls (Hidden in Print) */}
